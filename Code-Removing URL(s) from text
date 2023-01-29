@@ -1,0 +1,13 @@
+def remove_url(text):
+      pattern=re.compile(r'http?://\S+|www\.\S+')
+      return pattern.sub(r'',text)
+      
+text1='Check out my notebook https://www.kaggle.com/campusx/notebook8223fc1abb'
+text2='Check out my notebook http://www.kaggle.com/campusx/notebook8223fc1abb'
+text3='Google search here www.google.com'
+text4='For notebook click https://www.kaggle.com/campusx/notebook8223fc1abb to search check www.google.com'
+
+text4
+
+remove_url(text1)
+
