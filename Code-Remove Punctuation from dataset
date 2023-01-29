@@ -1,0 +1,26 @@
+import numpy as np
+import pandas as pd
+
+import os
+for dirname, _,filename in os.walk('/kaggle/input'):
+     for filename in filenames:
+          print(os.path.join(dirname,filename))
+          
+df=pd.read_csv('/kaggle/input/twitter-sentiment-analysis-hatred-speech/train.csv')
+
+df.head()
+
+df.shape
+
+df.sample(5)
+
+import string
+exclude=string.punctuation
+
+def remove_punc1(text):
+        return text.translate(str.maketrans('','',exclude))
+        
+
+df['tweet']=df['tweet'].apply(remove_punc1)
+
+df
