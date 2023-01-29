@@ -5,6 +5,10 @@ def remove_html_tags(text):
    
 text="<html><body><p>ghch</p><p>hv jtgc hgchf hch</p></body></html>"
 
-remove_html_tags(text)
+(text)
 
 text
+
+df['review']=df['review'].apply(remove_html_tags)
+
+df['review'][3]
