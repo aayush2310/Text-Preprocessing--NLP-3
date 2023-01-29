@@ -1,0 +1,5 @@
+from textblob import TextBlob
+
+incorrect_text='certain condituions durling severl organisatns aree modified in the sane manner.'
+textBlb=TextBlob(incorrect_text)
+textBlb.correct().string
