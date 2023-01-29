@@ -1,0 +1,10 @@
+import re
+def remove_html_tags(text):
+   pattern=re.compile('<.*?>')
+   return pattern.sub(r'', text)
+   
+text="<html><body><p>ghch</p><p>hv jtgc hgchf hch</p></body></html>"
+
+remove_html_tags(text)
+
+text
