@@ -1,0 +1,29 @@
+import string,time
+string.punctuation
+
+exclude=string.punctuation
+
+def remove_punc(text):
+   for char in exclude:
+       text=text.replace(char,'')
+   return text
+   
+text='strunh.jnjn noncsj?'
+
+start=time.time()
+print(remove_punc(text))
+time1=time.time()-start
+print(time1)
+
+#Fast code
+
+def remove_punc1(text):
+   return text.translate(str.maketrans('','',exclude))
+   
+   
+start=time.time()
+print(remove_punc(text))
+time2=time.time()-start
+print(time2)
+
+time1/time2
