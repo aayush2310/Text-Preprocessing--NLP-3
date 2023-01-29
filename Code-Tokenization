@@ -1,0 +1,46 @@
+1.Using the split Function
+
+#word tokenization
+
+sent1='I am going to Delhi'
+sent1.split()
+
+#sentence tokenization
+sent2='I am going to Delhi.I will stay there for 3 days.Let's hope the trip goes well.'
+sent2.split('.')
+
+#Problems with split function
+sent3='I am going to Delhi!'
+sent3.split()
+
+sent4='Where do think I should go? I have 3 day holiday'
+sent4.split('.')
+
+
+2.Regular Expression
+
+import re
+sent3='I am going to delhi!'
+tokens=re.findall("[\w']+",sent3)
+tokens
+
+text="""Lorem hyvh kjbkj bh hgc v kg kjj dz jgfhg jhcjg hv?
+hvgv jvjh hb kjbkj kbkh kjbk hvjh jhv gxg zd lijioh hf,
+rdste cgf kjhbkj dr hgchg bkh pij xd dxgf vgj jhbkjh."""
+sentences=re.compile('[.!?]').split(text)
+sentences
+
+3.NLTK(A Library)
+
+from nltk.tokenize import word_tokenize,sent_tokenize
+
+sent1='I am going to visit Delhi!'
+word_tokenize(sent1)
+
+text="""Lorem hyvh kjbkj bh hgc v kg kjj dz jgfhg jhcjg hv?
+hvgv jvjh hb kjbkj kbkh kjbk hvjh jhv gxg zd lijioh hf,
+rdste cgf kjhbkj dr hgchg bkh pij xd dxgf vgj jhbkjh."""
+
+sent_tokenize(text)
+
+4.Spacy(A Library)
