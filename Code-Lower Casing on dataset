@@ -1,0 +1,20 @@
+import numpy as np
+import pandas as pd
+
+import os
+for dirname, _,filenames in os.walk('/kaggle/input'):
+   for filename in filenames:
+       print(os.path.join(dirname,filename))
+       
+       
+df=pd.read_csv('/kaggle/input/imdb-dataset-of-50k-movie-reviews/IMDB Dataset.csv')
+
+df.head()
+
+df.shape
+
+df['review'][3].lower()
+
+df['review']=df['review'].str.llower()
+
+df
