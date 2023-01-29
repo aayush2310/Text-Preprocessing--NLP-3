@@ -1,0 +1,14 @@
+chat_words
+#this is say a python dictionary
+
+def chat_conversion(text):
+     new_text=[]
+     for w in text.split():
+         if w.upper() in chat_words:
+             new_text.append(chat_words[w.upper()])
+         else:
+             new_text.append(w)
+     return " ".join(new_text)
+     
+     
+chat_conversion('IMHO he is the best')
