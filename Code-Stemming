@@ -1,0 +1,13 @@
+from nltk.stem.porter import 
+
+ps=PorterStemmer()
+def stem_words(text):
+     return " ".join([ps.stem(word) for word in text.split()])
+     
+sample="walk walks walking walked"
+stem_words(sample)
+
+text='hcfhf jvjg hvhc rxdf esgf lkj yfyu bnfs lkgnl lgnlg gjge jgbea jgbeaj ekjgb jgb rkjgb legnle lgel gsjbgl gelkgng gkjebg ejlgbe gjgbg ,gbb'
+print(text)
+
+stem_words(text)
