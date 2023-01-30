@@ -1,1 +1,5 @@
 Lower Casing is done because python is case sensitive and will treat both upper case and lower case differently.
+
+If I want to show the result to someone,then stemming is not the correct way to go with,instead go with lemmatization.Work of both is same-to find the root word but 
+sometimes the o/p of stemming will not be a word in english.but o/p of lemmatization is english word.Lemmatization is slow bcz. it searches for the english word 
+whereas the other one is fast.
